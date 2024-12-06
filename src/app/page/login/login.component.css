@@ -1,0 +1,145 @@
+
+
+.navbar {
+  width: 100%;
+  background-color: #3577ea;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  animation: slideDown 0.6s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn {
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+h1.no-wrap {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  font-size: 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffdd57;
+}
+
+/* Style pour le formulaire de connexion */
+.container {
+  padding-top: 60px;
+}
+
+.card {
+  border: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.card-body {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  color: #3577ea;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-floating {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.btn-login {
+  background-color: #3577ea;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.btn-login:hover {
+  background-color: #286ab5;
+}
+
+.text-center a {
+  color: #3577ea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-center a:hover {
+  color: #286ab5;
+}
+

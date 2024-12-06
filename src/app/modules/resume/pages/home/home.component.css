@@ -1,0 +1,269 @@
+/* Drawer container background and height */
+.mat-drawer-container {
+  background-color: #ffffff;
+  height: 92%;
+}
+
+/* Drawer styling */
+.mat-drawer {
+  background-color: #ffffff;
+  width: 16%;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the drawer */
+  padding-top: 20px; /* Optional: Adds padding to the top */
+}
+
+/* Style for the loading message */
+.mat-nav-list .loading-message {
+  text-align: center;
+  font-size: 18px;
+  color: #757575;
+}
+
+/* Style for the empty list message */
+.empty-list-message {
+  text-align: center;
+  padding: 20px;
+  color: #757575;
+  font-size: 16px;
+}
+
+/* Styling for the list items */
+.mat-list-item {
+  font-size: 16px;
+  color: #333; /* Adjust text color */
+}
+
+/* Style for the mat-divider (line between list items) */
+.mat-divider {
+  margin: 10px 0;
+}
+
+/* Optional: Style for the icon */
+.empty-list-message i {
+  font-size: 40px;
+  color: blue; /* Icon color */
+}
+
+/* Drawer content styling */
+.mat-drawer-content {
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+/* General styling for the loading screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.loading-screen h1 {
+  font-size: 2.5rem;
+  color: #444;
+}
+
+.loading-screen p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.skeleton-card .skeleton-text {
+  background-color: #e0e0e0;
+  height: 24px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.skeleton-card .skeleton-text.small {
+  width: 80%;
+}
+
+/* Centered "Hello" message when no resume is generated */
+.no-generated-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.no-generated-message h1 {
+  margin-bottom: 20px;
+}
+
+.no-generated-message strong {
+  font-size: 2rem;
+  /*color: #444;*/
+}
+
+/* Style for buttons */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-outline-secondary {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Flex layout for action buttons and form */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav span {
+  flex: 1;
+}
+
+.nav .btn {
+  margin-left: 10px;
+}
+
+/* Form styling */
+.input-group {
+  margin-bottom: 40px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+textarea[placeholder="Write Job Description"] {
+  min-height: 80px;
+}
+
+/* Style for the heading (h1) and the strong text */
+.custom-message h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  /*color: blue; /* Dark blue-gray color */
+  text-align: center;
+  margin-bottom: 20px; /* Adjust spacing between the heading and the next text */
+}
+
+.custom-message strong {
+  font-size: 1.5rem;
+  color: blublacke; /* Teal color */
+  display: block; /* Ensure it's on a new line */
+  text-align: center;
+}
+/* Style for the Generate button */
+.custom-button {
+  background-color: blue; /* Blue color */
+  color: white; /* Text color */
+  border: 2px solid blue; /* Border matching the background color */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and animation */
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: #2980b9; /* Darker blue when hovered */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Disabled state */
+.custom-button:disabled {
+  background-color: #bdc3c7; /* Light gray when disabled */
+  border-color: #bdc3c7; /* Match the border with the background */
+  /* color: #7f8c8d; /* Darker gray text */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+/* Add a focus effect for accessibility */
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.7); /* Add a blue glow when focused */
+}
+
+/* Animation fadeIn pour l'apparition progressive du texte */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appliquer l'animation à l'élément */
+.fadeIn {
+  animation: fadeIn 1.5s ease-out forwards; /* Ajout de 'forwards' pour conserver le dernier état de l'animation */
+  opacity: 0; /* Initialement invisible */
+}
+
+h1.fadeIn {
+  animation-delay: 0.5s; /* Retarder l'animation du <h1> */
+}
+
+strong.fadeIn {
+  animation-delay: 1s; /* Retarder l'animation du <strong> */
+}
+/* Animation fadeIn pour l'apparition progressive du texte */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appliquer l'animation et le dégradé au texte */
+.fadeIn {
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0; /* Initialement invisible */
+  background-image: linear-gradient(
+    to right,
+    #3577ea,
+    #6fa3f7
+  ); /* Dégradé bleu */
+  -webkit-background-clip: text; /* Applique le dégradé seulement sur le texte */
+  color: transparent; /* Rend le texte transparent pour que le dégradé apparaisse */
+}
+
+h1.fadeIn {
+  animation-delay: 0.5s; /* Retarder l'animation du <h1> */
+}
+
+strong.fadeIn {
+  animation-delay: 1s; /* Retarder l'animation du <strong> */
+}
+
+.custom-padding {
+  padding-top: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+textarea.form-control {
+  resize: none; /* Désactive le redimensionnement manuel */
+  transition: height 0.2s ease; /* Animation pour une transition fluide de la hauteur */
+}

@@ -1,5 +1,6 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
+import { Constants } from '../../../constants';
 import { environment } from '../../../environments/environment';
 
 export const authGuard: CanActivateFn = () => {
@@ -10,7 +11,7 @@ export const authGuard: CanActivateFn = () => {
   ) {
     return true;
   } else {
-    router.navigate(['/not-authorized']);
+    router.navigate(['/login']);
     return false;
   }
 };

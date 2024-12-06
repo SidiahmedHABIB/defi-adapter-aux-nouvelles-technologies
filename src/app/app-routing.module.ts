@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: IndexComponent },
   {
-    path: 'my-resume',
+    path: 'myresume',
+    canActivate: [authGuard],
     loadChildren: () =>
       import('./modules/resume/resume.module').then((m) => m.ResumeModule),
   },

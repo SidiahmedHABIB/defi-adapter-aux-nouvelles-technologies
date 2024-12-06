@@ -57,3 +57,28 @@
 .mat-nav-list li.active {
   background-color: #e0e0e0;
 }
+
+/* Animation de fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 40px; /* Ajouter un peu d'espace autour du texte */
+}
+
+/* Dégradé bleu sur le texte */
+.page-title, .page-subtitle {
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Dégradé bleu */
+  -webkit-background-clip: text; /* Applique le dégradé au texte */
+  color: transparent; /* Le texte devient transparent, le dégradé apparaît */
+}

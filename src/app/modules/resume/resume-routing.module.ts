@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ResumeComponent } from './resume.component';
-import { authGuard } from '../../services/guards/auth.guard';
 import { CreateResumeComponent } from './pages/create-resume/create-resume.component';
 import { EditResumeComponent } from './pages/edit-resume/edit-resume.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,23 +10,19 @@ const routes: Routes = [
   {
     path: '',
     component: ResumeComponent,
-    canActivate: [authGuard],
     children: [
-      { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+      { path: '', component: HomeComponent },
       {
         path: 'profile/:id',
         component: CreateResumeComponent,
-        canActivate: [authGuard],
       },
       {
         path: 'edit/:id',
         component: EditResumeComponent,
-        canActivate: [authGuard],
       },
       {
         path: 'not-authorized',
         component: NotAuthorizedComponent,
-        canActivate: [authGuard],
       },
     ],
   },

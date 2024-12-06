@@ -34,9 +34,9 @@ export class LoginComponent {
         console.log(response);
         if (response.message === 'Login successful') {
           if (response.score > 0) {
-            this.router.navigateByUrl('/main/home');
+            this.router.navigateByUrl('/myresume');
           } else {
-            this.router.navigateByUrl(`/main/profile/${response.userId}`);
+            this.router.navigateByUrl(`/myresume/portfolio/${response.userId}`);
           }
         } else {
           Swal.fire({

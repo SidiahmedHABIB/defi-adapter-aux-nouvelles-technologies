@@ -1,0 +1,22 @@
+.toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbb;
+  color: white;
+  border-radius: 50%;
+}

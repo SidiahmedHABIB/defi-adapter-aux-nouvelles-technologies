@@ -1,45 +1,87 @@
-<div class="mb-3">
-  <nav
-    class="navbar navbar-expand-lg navbar-light bg-light"
-    style="background-color: #dddddd"
-  >
-    <div class="container-fluid">
-      <a
-        href=""
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
-      >
-        <strong class="fs-5" style="padding-left: 5px">MyResume</strong>
-      </a>
-
-      <a href="/login" class="btn btn-outline-secondary"> Login </a>
-      <a href="/register" class="btn btn-secondary ms-2"> Register </a>
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="/" style="text-decoration: none; color: white">MyResume</a>
     </div>
-  </nav>
-</div>
-
-<main>
-  <div class="card">
-    <h2>Welcome to MyResume</h2>
-    <p>
-      Our AI technology analyzes your input and provides personalized
-      recommendations to help you create a resume that highlights your
-      strengths.
-    </p>
+    <ul class="navbar-links">
+      <li><a href="/login">Sign In</a></li>
+      <li><a href="/register">Sign Up</a></li>
+    </ul>
   </div>
+</nav>
 
-  <div class="card">
-    <h2>Easy to Use</h2>
-    <p>
-      Choose from a variety of modern and professional resume templates designed
-      to impress hiring managers in any industry.
-    </p>
-  </div>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 class="no-wrap">Stop sending the same resume everywhere</h1>
+      <h1 class="no-wrap">customize it now to stand out!</h1>
 
-  <div class="card">
-    <h2>Expert Guidance</h2>
-    <p>
-      Access tips and guidelines throughout the resume-building process,
-      ensuring that your resume showcases your qualifications effectively.
-    </p>
-  </div>
-</main>
+      <p>
+        Boost your job search with AI-crafted resumes: accurate, unique, and
+        built to impress every step of the way. Start shining now!
+      </p>
+      <a
+        href="/login"
+        class="btn primary"
+        style="text-decoration: none; color: white"
+        >Get Started</a
+      >
+    </div>
+  </header>
+
+  <section class="features-container">
+    <div class="feature-card">
+      <h2>How does MYRESUME work?</h2>
+      <p>
+        MYRESUME analyzes the job description you provide and cross-references
+        your profile and existing resume to identify key skills and experiences.
+        It crafts a customized resume, including a professional summary,
+        detailed work experience, and educational background, optimizing it with
+        relevant keywords for the specific job.
+      </p>
+    </div>
+    <div class="feature-card">
+      <h2>AI-Powered Tools for a Winning Job Search</h2>
+      <p>
+        Experience the innovative edge of WriteCV.io, where our AI-driven
+        platform offers personalized resume writing, strategic cover letter
+        creation, and effective job application tracking. Start with 100 free
+        credits and take control of your job search.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-list">
+      <div class="feature">
+        <h3>AI-Powered Personalization</h3>
+        <p>
+          Generate resumes tailored to specific job descriptions effortlessly.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>ATS-Friendly Templates</h3>
+        <p>Optimize your chances of passing applicant tracking systems.</p>
+      </div>
+      <div class="feature">
+        <h3>Customizable Styles</h3>
+        <p>Adjust resume formats to suit your personal preferences.</p>
+      </div>
+      <div class="feature">
+        <h3>Fast & Efficient</h3>
+        <p>Create professional resumes in seconds, saving valuable time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 MyResume. Digimon_Z_ISITCom .</p>
+  </footer>
+
+  <script>
+    function getStarted() {
+      window.location.href = "/register"; // Adjust the link to match your app's route.
+    }
+  </script>
+</body>

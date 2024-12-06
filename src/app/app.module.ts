@@ -21,7 +21,6 @@ import {
 } from '@angular/material/menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NavBarComponent } from './modules/resume/components/nav-bar/nav-bar.component';
 import { IndexComponent } from './page/index/index.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -29,7 +28,6 @@ import { RegisterComponent } from './page/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
     LoginComponent,
     IndexComponent,
     RegisterComponent,
@@ -59,4 +57,3 @@ import { RegisterComponent } from './page/register/register.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
