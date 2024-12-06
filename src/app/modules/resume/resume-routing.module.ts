@@ -13,7 +13,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       {
-        path: 'profile/:id',
+        path: 'portfolio/:id',
         component: CreateResumeComponent,
       },
       {

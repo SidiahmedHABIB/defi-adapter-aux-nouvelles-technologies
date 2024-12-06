@@ -40,6 +40,7 @@ export class ResumeService {
    */
   generateResume(userId: string, jobDescription: string): Observable<Resume> {
     const body = { userId, jobDescription };
+    console.log(body);
     return this.http.post<Resume>(`${this.apiUrl}/generate`, body);
   }
 

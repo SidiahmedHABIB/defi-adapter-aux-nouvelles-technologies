@@ -1,30 +1,7 @@
-<mat-toolbar color="primary">
-  <div class="toolbar-content">
-    <!-- Brand Link -->
-    <a mat-button routerLink="/main/home" class="mat-button">
-      <strong>MyResume</strong>
-    </a>
-
-    <!-- Spacer to push the menu to the right -->
-    <span class="spacer"></span>
-
-    <!-- Avatar and Menu -->
-    <mat-menu #userMenu="matMenu">
-      <button mat-menu-item routerLink="/admin/loadStudents">
-         Profile
-      </button>
-      <button mat-menu-item (click)="handleLogout()">
-        <mat-icon>exit_to_app</mat-icon> Logout
-      </button>
-    </mat-menu>
-
-    <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User Menu">
-      <div class="avatar">
-        {{ userName?.[0] || 'U' }}
-      </div>
-    </button>
-
+<div class="navbar">
+  <a href="/myresume" class="navbar-logo-link">MYRESUME</a>
+  <div class="navbar-menu">
+    <a href="/profile">Profile</a>
+    <a href="" (click)="handleLogout()">Logout</a>
   </div>
-</mat-toolbar>
-
-
+</div>

@@ -31,19 +31,10 @@ import { RegisterComponent } from './page/register/register.component';
     LoginComponent,
     IndexComponent,
     RegisterComponent,
-    // Remove ResumeModule components from here, e.g.:
-    // HomeComponent,
-    // CreateResumeComponent,
-    // EditResumeComponent,
-    // ResumeTmpOneComponent,
-    // ResumeTmpTwoComponent,
-    // NotAuthorizedComponent,
-    // PageNotFoundComponent,
-    // LoadingComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, // Your routing module will take care of lazy loading ResumeModule
+    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,

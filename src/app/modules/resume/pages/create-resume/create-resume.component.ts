@@ -6,8 +6,8 @@ import {
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ResumeService } from '../../../../services/services/resume.service';
-import Swal from 'sweetalert2';
 import { environment } from '../../../../../environments/environment';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-resume',
@@ -35,7 +35,7 @@ export class CreateResumeComponent {
 
   ngOnInit(): void {
     this.profileForm = this.formBuilder.group({
-      fname: [''], // Ensure initialization
+      fname: [''], // Ensure the control is initialized
       lname: [''],
       contact: this.formBuilder.group({
         email: [''],
@@ -71,12 +71,12 @@ export class CreateResumeComponent {
           'Database Knowledge',
           'Cloud Architectures',
           'Troubleshooting',
-        ], // For arrays, initialize as []
+        ],
       }),
       projects: this.formBuilder.group({
         ptitle: [''],
         pdescription: [''],
-        technologies: [[]],
+        technologies: [''],
       }),
     });
 
@@ -91,9 +91,11 @@ export class CreateResumeComponent {
 
   // manage languages and intersests
   onAddLangToResume() {
+    console.log('test add lang');
     this.langsFormGroup.value.keyword !== null
       ? this.langsList.push(this.langsFormGroup.value.keyword)
       : null;
+    console.log(this.langsFormGroup.value.keyword);
     this.langsFormGroup.reset();
   }
   onRemoveLangFromResume(key: string) {
@@ -110,77 +112,105 @@ export class CreateResumeComponent {
   }
   // manage languages and intersests
   handlEditResume() {
-    let resumRequest: ResumeRequest = {
-      userId: this.userId,
-      fname: this.profileForm.value.fname,
-      lname: this.profileForm.value.lname,
+    console.log(this.userId);
+
+    let resumeRequest: ResumeRequest = {
+      userId: '675278794f1fe47de9b146de',
+      fname: 'Sidi',
+      lname: 'Habib',
       contact: {
-        email: this.profileForm.value.contact.email,
-        phone: this.profileForm.value.contact.phone,
-        location: this.profileForm.value.contact.address,
-        linkedin: this.profileForm.value.contact.linkedin,
-        github: this.profileForm.value.contact.github,
+        email: 'sidiahmedhabib@gmail.com',
+        phone: '34136507',
+        location: 'sousse, tunis',
+        linkedin: '',
+        github: '',
       },
-      profile: this.profileForm.value.profile,
-      education: [this.profileForm.value.education],
-      experience: [
+      profile: {
+        title: 'Software Engineer Intern',
+        description:
+          'Learn the architecture of the components maintained by the team for PS5 services. Maintain, update, and extend RESTful Web Services APIs. Work with algorithms that handle massive data sets to power these APIs. Produce detailed design and development documentation. Develop using agile methodology.',
+      },
+      education: [
         {
-          title: this.profileForm.value.experience.xtitle,
-          company: this.profileForm.value.experience.company,
-          location: this.profileForm.value.experience.location,
-          startDate: this.profileForm.value.experience.startDate,
-          endDate: this.profileForm.value.experience.endDate,
-          description: this.profileForm.value.experience.xdescription,
-          skills: [
+          degree: 'Bachelor of Science',
+          major: 'Computer Science',
+          university: 'Your University',
+          location: 'Your City, Your Country',
+          startDate: new Date(),
+          endDate: new Date(),
+          relevantCourses: [
             'Java 8+',
             'JEE 7+',
             'Spring Framework',
             'Microservices Architecture',
             'CI/CD Environment',
             'Apache Kafka',
+          ],
+        },
+      ],
+      experience: [
+        {
+          title: 'Software Engineer Intern',
+          company: 'Sony Interactive Entertainment',
+          location: 'San Mateo or San Diego or Remote',
+          startDate: new Date(),
+          endDate: new Date(),
+          description:
+            'Learn the architecture of the components maintained by the team for PS5 services. Maintain, update, and extend RESTful Web Services APIs. Work with algorithms that handle massive data sets to power these APIs. Produce detailed design and development documentation. Develop using agile methodology.',
+          skills: [
+            'Java',
+            'RESTful Web Services',
+            'Agile Methodology',
+            'CI/CD',
+            'NoSQL',
+            'SQL',
+            'Kubernetes',
+            'AWS',
           ],
         },
       ],
       projects: [
         {
-          title: this.profileForm.value.projects.ptitle,
-          description: this.profileForm.value.projects.pdescription,
+          title: 'Software Engineer Intern',
+          description:
+            'Learn the architecture of the components maintained by the team for PS5 services. Maintain, update, and extend RESTful Web Services APIs. Work with algorithms that handle massive data sets to power these APIs. Produce detailed design and development documentation. Develop using agile methodology.',
           technologies: [
-            'Java 8+',
-            'JEE 7+',
-            'Spring Framework',
-            'Microservices Architecture',
-            'CI/CD Environment',
-            'Apache Kafka',
+            'Java',
+            'RESTful Web Services',
+            'Agile Methodology',
+            'CI/CD',
+            'NoSQL',
+            'SQL',
+            'Kubernetes',
+            'AWS',
           ],
         },
       ],
       skills: {
         technical: [
-          'Java 8+',
-          'JEE 7+',
-          'Spring Framework',
-          'Microservices Architecture',
-          'CI/CD Environment',
-          'Apache Kafka',
+          'Java',
+          'RESTful Web Services',
+          'Agile Methodology',
+          'CI/CD',
+          'NoSQL',
+          'SQL',
         ],
-        tools: ['Docker', 'Kubernetes'],
+        tools: ['Kubernetes', 'AWS'],
         others: [
-          'Object-Oriented Design',
-          'Design Patterns',
-          'Unit and Integration Testing',
-          'Database Knowledge',
-          'Cloud Architectures',
-          'Troubleshooting',
+          'Strong communication skills',
+          'Ability to quickly learn new technologies',
+          'Backend software development',
         ],
       },
-      languages: this.langsList,
-      interests: this.intersList,
+      languages: ['Arabic', 'French'],
+      interests: ['Gaming', 'Technology', 'Machine Learning'],
       request: '',
       portfolio: true,
     };
 
-    return this.resumeService.createUserPortfolio(resumRequest).subscribe({
+    console.log(resumeRequest);
+
+    return this.resumeService.createUserPortfolio(resumeRequest).subscribe({
       next: (resp: Resume) => {
         console.log(resp);
         Swal.fire({
@@ -188,7 +218,7 @@ export class CreateResumeComponent {
           text: 'Portifolio has been updated',
           icon: 'success',
         });
-        this.router.navigateByUrl('/main/home');
+        this.router.navigateByUrl('/myresume');
       },
       error: (error) => {
         console.log(error.message);

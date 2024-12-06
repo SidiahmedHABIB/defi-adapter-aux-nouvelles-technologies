@@ -45,7 +45,7 @@ export class HomeComponent {
     this.userId = localStorage.getItem(environment.userId);
   }
   handleEditResume() {
-    this.router.navigateByUrl('/main/edit/' + this.resume.id);
+    this.router.navigateByUrl('/myresume/edit/' + this.resume.id);
   }
   public handleChangeResumeStyle(style: number) {
     this.style = style;

@@ -24,13 +24,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ResumeComponent,
-    CreateResumeComponent,
     EditResumeComponent,
     HomeComponent,
     NotAuthorizedComponent,
     ResumeTmpOneComponent,
     ResumeTmpTwoComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateResumeComponent,
   ],
   imports: [
     CommonModule, // For common Angular directives like ngIf, ngFor, etc.
@@ -42,7 +42,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatMenuModule,
     ReactiveFormsModule,
-
   ],
 })
 export class ResumeModule {}

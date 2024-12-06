@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8088/api/v1',
+  apiBaseUrl: 'http://20.3.248.15:8088/api/v1',
   maxResults: 20,
   isAuthenticated: 'isAuthenticated',
   userName: 'userName',
