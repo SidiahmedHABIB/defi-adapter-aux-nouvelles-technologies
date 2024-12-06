@@ -115,7 +115,7 @@ export class CreateResumeComponent {
     console.log(this.userId);
 
     let resumeRequest: ResumeRequest = {
-      userId: '675278794f1fe47de9b146de',
+      userId: this.userId,
       fname: 'Sidi',
       lname: 'Habib',
       contact: {
